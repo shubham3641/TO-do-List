@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
+    id ("io.realm.kotlin")
 }
 
 android {
@@ -45,4 +46,16 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+    //font
+    implementation("com.intuit.sdp:sdp-android:1.1.0")
+
+
+    //realm
+    implementation ("io.realm.kotlin:library-base:1.16.0")
+    implementation ("io.realm.kotlin:library-sync:1.16.0")
+
+    //coroutine
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 }
